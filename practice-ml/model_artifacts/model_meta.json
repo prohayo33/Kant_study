@@ -1,0 +1,138 @@
+{
+  "model_name": "RandomForestRegressor",
+  "saved_at": "2026-10-07T18:36:42",
+  "selected_search_method": "Optuna(TPE)",
+  "best_params": {
+    "n_estimators": 175,
+    "max_depth": 12,
+    "random_state": 42,
+    "n_jobs": -1
+  },
+  "cv_mean": 0.8212542415716282,
+  "cv_std": 0.06428073023916543,
+  "test_r2": 0.8910932915341476,
+  "baseline_config": {
+    "n_estimators": 100,
+    "max_depth": null,
+    "random_state": 42,
+    "n_jobs": -1
+  },
+  "tuned_candidate": {
+    "search_method": "Optuna(TPE)",
+    "params": {
+      "n_estimators": 175,
+      "max_depth": 12,
+      "random_state": 42,
+      "n_jobs": -1
+    }
+  },
+  "search_summary": [
+    {
+      "search_method": "Optuna(TPE)",
+      "best_params": {
+        "n_estimators": 175,
+        "max_depth": 12
+      },
+      "cv_mean": 0.8212542415716282,
+      "cv_std": 0.06428073023916545,
+      "search_seconds": 6.043230295181274,
+      "gap_from_top": 0.0
+    },
+    {
+      "search_method": "RandomizedSearchCV",
+      "best_params": {
+        "max_depth": 11,
+        "n_estimators": 230
+      },
+      "cv_mean": 0.8210296383331108,
+      "cv_std": 0.0650864730669607,
+      "search_seconds": 6.855922222137451,
+      "gap_from_top": 0.0002246032385173624
+    },
+    {
+      "search_method": "GridSearchCV",
+      "best_params": {
+        "max_depth": 12,
+        "n_estimators": 200
+      },
+      "cv_mean": 0.8206179847869421,
+      "cv_std": 0.06442538938888973,
+      "search_seconds": 6.4369797706604,
+      "gap_from_top": 0.0006362567846860401
+    }
+  ],
+  "tuning_comparison": [
+    {
+      "model": "baseline",
+      "train_r2_mean": 0.9736781487775229,
+      "val_r2_mean": 0.8190106975986836,
+      "val_r2_std": 0.07036957021229155,
+      "train_val_gap": 0.1546674511788393
+    },
+    {
+      "model": "tuned",
+      "train_r2_mean": 0.9726922785657429,
+      "val_r2_mean": 0.8212542415716282,
+      "val_r2_std": 0.06428073023916543,
+      "train_val_gap": 0.15143803699411473
+    }
+  ],
+  "fold_comparison": [
+    {
+      "fold": 1,
+      "baseline_train_r2": 0.9717282314960729,
+      "baseline_val_r2": 0.862666576509865,
+      "tuned_train_r2": 0.9714506967692278,
+      "tuned_val_r2": 0.8694144190616934,
+      "val_diff(tuned-baseline)": 0.006747842551828365
+    },
+    {
+      "fold": 2,
+      "baseline_train_r2": 0.9754444273421322,
+      "baseline_val_r2": 0.680789562718199,
+      "tuned_train_r2": 0.9763824173558341,
+      "tuned_val_r2": 0.6966963488281909,
+      "val_diff(tuned-baseline)": 0.015906786109991855
+    },
+    {
+      "fold": 3,
+      "baseline_train_r2": 0.9749692890566818,
+      "baseline_val_r2": 0.8342704674151573,
+      "tuned_train_r2": 0.9721360636198019,
+      "tuned_val_r2": 0.827994285768053,
+      "val_diff(tuned-baseline)": -0.006276181647104306
+    },
+    {
+      "fold": 4,
+      "baseline_train_r2": 0.9745858612874078,
+      "baseline_val_r2": 0.8450450059938253,
+      "tuned_train_r2": 0.9726206152580761,
+      "tuned_val_r2": 0.842770183058368,
+      "val_diff(tuned-baseline)": -0.0022748229354572214
+    },
+    {
+      "fold": 5,
+      "baseline_train_r2": 0.9716629347053192,
+      "baseline_val_r2": 0.8722818753563717,
+      "tuned_train_r2": 0.9708715998257751,
+      "tuned_val_r2": 0.8693959711418358,
+      "val_diff(tuned-baseline)": -0.0028859042145359393
+    }
+  ],
+  "cv_r2_diff_tuned_minus_baseline": 0.0022435439729445728,
+  "cv_mean_minus_test_r2": -0.06983904996251944,
+  "features": [
+    "OverallQual",
+    "GrLivArea",
+    "GarageCars",
+    "GarageArea",
+    "TotalBsmtSF",
+    "1stFlrSF",
+    "2ndFlrSF",
+    "FullBath",
+    "TotRmsAbvGrd",
+    "YearBuilt",
+    "YearRemodAdd",
+    "Fireplaces"
+  ]
+}
